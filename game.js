@@ -19,7 +19,7 @@ var config = {
 var player; 
 var stars; 
 var bombs; 
-var platforms; 
+var ground; 
 var cursors; 
 var score = 0; 
 var level = 1; 
@@ -40,9 +40,7 @@ function create() {
     this.add.image(400, 300, 'sky'); 
     platforms = this.physics.add.staticGroup(); 
     platforms.create(400, 568, 'ground').setScale(2).refreshBody(); 
-    platforms.create(600, 400, 'ground'); 
-    platforms.create(50, 250, 'ground'); 
-    platforms.create(750, 220, 'ground'); 
+
     player = this.physics.add.sprite(100, 450, 'dude'); 
     player.setBounce(0.2); 
     player.setCollideWorldBounds(true); 
